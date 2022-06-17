@@ -1,35 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Mangás</title>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Esta é a página de mangás</h1>
-            <a href="{% url 'index' %}">Página inicial</a>
-        </nav>
+        <h1>Esta é a página de mangás</h1>
     </header>
-    <table>
-        <thead>
-            <tr>
-                <th>Manga</th>
-                <th>Genero</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for man in mang %}
-            <tr>
-                <td><p>{{ man.nome}}</p></td>
-                <td><p>{{ man.genero }}</p></td>
-                <td><p>{{ man.status }}</p></td>
-            </tr>
-        {% endfor %}
-    </tbody>
-    </table>
+    <main>
+        <div>
+            <ul>
+                {% for man in mang %}
+                    <li>{{ man.nome }} / {{ man.capitulos }} capitulos / {{ man.status }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p>Este é apenas o basico do django: trazer dados ao template de forma rápida.</p>
+            <p>Cada informação ao lado de '/' são coletadas do banco de dados.</p>
+            <p>Agora, sempre que um novo dado for adicioado, será adicioado no template também!</p>
+        </div>
+        <div>
+            <a href="{% url 'index' %}">Página inicial</a>
+        </div>
+    </main>
 </body>
 </html>

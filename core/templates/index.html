@@ -1,17 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Página inicial</title>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Opa, esse é meu <strong>primeiro</strong> projeto django!</h1>
-            <a href="{% url 'mangas' %}">Pagina de mangás</a>
-        </nav>
+        <h1>Opa, esse é meu <strong>primeiro</strong> projeto django!</h1>
     </header>
     <main>
         <section>
@@ -22,6 +21,12 @@
             <h3>Porque o css tá tão ruim?</h3>
             <p>Nem me pergunte amigo...</p>
         </section>
+        <section>
+            <a class="nave" href="{% url 'mangas' %}">Pagina de mangás</a>
+        </section>
+        <div>
+            <img src="{% static 'images/img.jpeg' %}" alt="mangas fod">
+        </div>
     </main>
     
 </body>

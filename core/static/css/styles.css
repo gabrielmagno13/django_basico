@@ -1,0 +1,25 @@
+* {
+    margin: 10;
+    padding: 10;
+    border: 10;
+    outline: 10;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+body {
+    background-color: black;
+    color: rgb(15, 150, 15);
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+
+table {
+    align-content: center;
+    margin: 10px;
+}
+
+img {
+    margin: 20px;
+}
