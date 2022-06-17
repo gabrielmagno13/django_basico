@@ -4,6 +4,7 @@ from .models import Manga
 def index(request):
     return render(request, 'index.html')
 
+
 def mangas(request):
     mang = Manga.objects.all()
     context = {
