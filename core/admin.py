@@ -3,7 +3,7 @@ from .models import Manga
 
 
 class MangaAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'capitulos', 'genero', 'status']
+    list_display = ['nome', 'capitulos', 'genero', 'status', 'autor']
 
 
 admin.site.register(Manga, MangaAdmin)

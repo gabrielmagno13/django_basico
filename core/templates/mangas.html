@@ -16,14 +16,15 @@
         <div>
             <ul>
                 {% for man in mang %}
-                    <li>{{ man.nome }} / {{ man.capitulos }} capitulos / {{ man.status }}</li>
+                    <li><a href="{% url 'manga' man.id %}">{{ man.nome }}</a></li>
+                    <li><p>{{ man.autor }}</p></li>
                 {% endfor %}
             </ul>
         </div>
         <hr>
         <div>
             <p>Este é apenas o basico do django: trazer dados ao template de forma rápida.</p>
-            <p>Cada informação ao lado de '/' são coletadas do banco de dados.</p>
+            <p>Cada nome leva a um link, que por sua vez carrega ainda mais dados do db.</p>
             <p>Agora, sempre que um novo dado for adicioado, será adicioado no template também!</p>
         </div>
         <div>

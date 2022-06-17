@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Manga</title>
+</head>
+<body>
+    <header>
+        <h1>Dados do mangá: {{ man.nome }}</h1>
+    </header>
+    <main>
+        <section>
+            <ul>
+                <li>Capitulos: {{ man.capitulos }}</li>
+                <li>Genero: {{ man.genero }}</li>
+                <li>Autor: {{ man.autor }}</li>
+                {% if man.status == 'L' %}
+                <li>Status: Lançamento</li>
+                {% elif man.status == 'F' %}
+                <li>Status: Finalizado</li>
+                {% else %}
+                <li>Status: Indefinido</li>
+                {% endif %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a href="{% url 'mangas' %}">Voltar</a>
+    </footer>
+</body>
+</html>
