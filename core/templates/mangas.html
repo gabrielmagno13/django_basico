@@ -13,11 +13,23 @@
             <a href="{% url 'index' %}">Página inicial</a>
         </nav>
     </header>
-    <main>
-        <section>
-            {% for %}
-            {% endfor %}
-        </section>
-    </main>
+    <table>
+        <thead>
+            <tr>
+                <th>Manga</th>
+                <th>Genero</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for man in mang %}
+            <tr>
+                <td><p>{{ man.nome}}</p></td>
+                <td><p>{{ man.genero }}</p></td>
+                <td><p>{{ man.status }}</p></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
 </body>
 </html>
