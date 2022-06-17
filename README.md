@@ -8,6 +8,7 @@ Este é um projeto básico para testar meus conhecimentos no freamework django. 
 - Uso de arquivos estáticos e a sintaxe django-html
 
 Fiz deploy da aplicação na heroku, porém, ocorre um erro de servidor (500) ao tentar acessar o template do link da página inicial. Tentarei resolver esse tipo de pronlema no próximo projeto.
-Link da aplicação: https://project-gbrmns.herokuapp.com
+
+- Link da aplicação: https://project-gbrmns.herokuapp.com
 
 Em localhost, este erro não ocorre.
